@@ -1,17 +1,30 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container class="appComp" fluid px-0>
+    <v-layout>
+      <v-flex>
+        <header-comp />
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import HeaderComp from '../components/HeaderComp'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  export default {
+    name: 'HomeView',
+
+    components: {
+      HeaderComp,
+    },
   }
-}
 </script>
+
+<style>
+.appComp {
+  height: 100%;
+  max-width: 1500px ;
+ 
+}
+
+</style>
